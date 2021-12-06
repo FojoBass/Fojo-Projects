@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: rgb(211, 211, 211);
+}
+
+button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+section {
+    background-color: black;
+    max-width: 500px;
+    margin: 100px auto;
+    box-shadow: 0 0 5px 2px rgb(56, 56, 56);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+header {
+    text-align: right;
+    height: auto;
+    font-family: monospace;
+    padding: 20px 10px;
+}
+
+.history {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: rgb(160, 160, 160);
+    height: 23px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    text-align: right;
+    pointer-events: none;
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    background-color: rgb(14, 14, 14);
+    padding: 20px 10px;
+}
+
+button {
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button.special,
+.special span {
+    color: rgb(218, 81, 81);
+}
+
+button:active {
+    background: rgba(41, 41, 41, 0.548);
+    border-radius: 50%;
+}
+
+span.hide {
+    display: none;
+}
+
+.open {
+    grid-column: 4/5;
+}
+
+.text {
+    grid-column: 1/4;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .3rem;
+    color: grey;
+}
+
+@media screen and (min-width: 600px) {
+    section {
+        max-width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .text {
+        font-size: .7rem;
+    }
+}
