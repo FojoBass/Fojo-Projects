@@ -1,0 +1,366 @@
+body {
+    background-color: rgb(209, 209, 209);
+}
+
+section.hide,
+button.hide,
+.empty.hide {
+    display: none;
+}
+
+.empty {
+    height: 70vh;
+    display: flex;
+    color: rgba(83, 83, 83, 0.712);
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-family: verdana;
+}
+
+@media screen and (max-width: 400px) {
+    .empty {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* header section */
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(180, 180, 180);
+    box-shadow: 0 0 10px black;
+}
+
+.filter {
+    width: 25px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.filter hr {
+    border: none;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background-color: grey;
+    transition: all ease-in .3s;
+}
+
+.filter hr:nth-child(2) {
+    width: 75%;
+}
+
+.filter hr:last-child {
+    width: 50%;
+}
+
+.filter:hover hr {
+    background-color: black;
+}
+
+header h1 {
+    color: rgb(83, 83, 83);
+}
+
+header a {
+    letter-spacing: .2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(83, 83, 83);
+    outline: none;
+    border: 2px solid grey;
+    padding: 7px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px grey, -2px -2px 3px rgb(148, 148, 148);
+}
+
+header a:hover,
+header a:active,
+header a:focus {
+    box-shadow: inset -2px -2px 3px grey, inset 2px 2px 3px rgb(148, 148, 148);
+}
+
+@media screen and (min-width: 1300px) {}
+
+
+/* end header section */
+
+
+/* main body section */
+
+.main-body {
+    max-width: 1100px;
+    margin: 10px auto 50px;
+    padding: 20px 35px 0;
+}
+
+.score {
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score p {
+    letter-spacing: .1rem;
+    font-family: BlinkMacSystemFont;
+    text-align: center;
+}
+
+p.date,
+p.difficulty,
+p.time {
+    flex-basis: 28%;
+}
+
+.difficulty {
+    text-transform: capitalize;
+}
+
+p.serial-number {
+    flex-basis: 22%;
+}
+
+@media screen and (max-width: 500px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+    .filter {
+        transform: scale(.8);
+    }
+    header a {
+        font-size: .9rem;
+    }
+    .score p {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 299px) {
+    header h1 {
+        font-size: 1rem;
+    }
+    .filter {
+        transform: scale(.5);
+    }
+    header a {
+        font-size: .6rem;
+    }
+    .score p {
+        font-size: .4rem;
+    }
+}
+
+
+/* end main body section */
+
+
+/* clear confirm */
+
+.confirm,
+.filter-opts {
+    background-color: rgba(0, 0, 0, 0.534);
+    width: 100%;
+    height: 100vh;
+    color: burlywood;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: rgb(122, 6, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.confirm .container {
+    justify-content: space-evenly;
+    height: 30%;
+}
+
+.container h3 {
+    letter-spacing: .2rem;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.options button {
+    width: 50px;
+    height: 30px;
+    margin: 0 10px;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    border-radius: 50%;
+    background-color: rgb(122, 6, 29);
+    color: rgb(224, 145, 42);
+    box-shadow: 0 0 3px rgb(233, 57, 92);
+    transition: box-shadow .1s ease-in;
+}
+
+.options button:hover {
+    box-shadow: 2px 2px 3px rgb(87, 4, 20), -2px -2px 3px rgb(233, 57, 92);
+}
+
+.options button:active {
+    box-shadow: -2px -2px 3px rgb(87, 4, 20), 2px 2px 3px rgb(233, 57, 92);
+}
+
+@media screen and (max-width: 290px) {
+    .container {
+        width: 250px;
+    }
+    .container h3 {
+        font-size: 1rem;
+    }
+    .options button {
+        font-size: .7rem;
+    }
+}
+
+
+/* end clear confirm */
+
+
+/* filter opts */
+
+.filter-opts .container {
+    height: 300px;
+    justify-content: space-around;
+    padding-bottom: 15px;
+}
+
+.filter-opts h3 {
+    padding: 10px 0;
+}
+
+.filter-opts .opts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opts input {
+    margin-right: 15px;
+    visibility: hidden;
+}
+
+.opts label {
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: .2rem;
+    position: relative;
+}
+
+.opts label::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.easy label::before {
+    left: -43px;
+}
+
+.hard label::before {
+    left: -44px;
+}
+
+.all label::before {
+    left: -51px;
+}
+
+.opts input[type='radio']:checked+label::before {
+    background-color: burlywood;
+}
+
+.select {
+    color: burlywood;
+    background-color: inherit;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    position: relative;
+    left: 10px;
+    border: 1px solid burlywood;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.select:hover {
+    background-color: burlywood;
+    color: crimson;
+}
+
+.sec-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+}
+
+
+/* end filter opts */
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.clear {
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    background-color: inherit;
+    border: 2px rgb(83, 83, 83) solid;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: rgb(54, 54, 54);
+    font-size: .9rem;
+}
+
+.clear:hover {
+    background-color: rgb(83, 83, 83);
+    color: rgb(180, 180, 180);
+}
+
+@media screen and (max-width: 500px) {
+    .clear {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 299px) {
+    .clear {
+        font-size: .5rem;
+    }
+}
+
+
+/* end footer */

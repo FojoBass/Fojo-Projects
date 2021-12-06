@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzles || Score board</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="scores.css">
+</head>
+
+<body>
+    <header>
+        <div class="filter">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+
+        <h1>score board</h1>
+
+        <a href="index.html">menu</a>
+    </header>
+
+    <!-- main -->
+    <section class="main-body">
+        <div class="scores"></div>
+    </section>
+    <!--end  main -->
+
+    <!-- confirm clear -->
+    <section class="confirm hide">
+        <div class="container">
+            <h3>clear score board?</h3>
+
+            <div class="options">
+                <button id="no">no</button>
+                <button id="yes">yes</button>
+            </div>
+        </div>
+    </section>
+    <!-- end confirm clear -->
+
+    <!-- filter opts -->
+    <section class="filter-opts hide">
+        <div class="container">
+            <h3>filter scores</h3>
+            <div class="sec-container"></div>
+            <button class="select">select</button>
+        </div>
+    </section>
+    <!-- end filter opts -->
+
+    <h1 class="empty">no score</h1>
+
+
+    <footer>
+        <button class="clear hide">clear all scores</button>
+    </footer>
+
+    <script src="general.js"></script>
+    <script src="scores.js"></script>
+</body>
+
+</html>

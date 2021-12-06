@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzles || About</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <header>
+        <h1>about</h1>
+        <a href="index.html">menu</a>
+    </header>
+
+    <section class="main-body">
+        <p>created by <span>fojo</span></p>
+        <p>Copyright © <span id='current-year'></span> Number Puzzles All right reserved.</p>
+    </section>
+
+    <script>
+        const currYear = new Date().getFullYear();
+
+        document.getElementById('current-year').innerHTML = currYear;
+    </script>
+</body>
+
+</html>

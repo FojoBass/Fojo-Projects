@@ -1,0 +1,336 @@
+body {
+    background-image: linear-gradient(5deg, rgba(124, 221, 228, 0.623) 40%, rgba(6, 163, 184, 0.397) 60%);
+    background-repeat: no-repeat;
+}
+
+section.hide {
+    display: none;
+}
+
+.overlay {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-image: linear-gradient(45deg, rgba(3, 101, 114, .9) 30%, rgba(39, 165, 182, .9) 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    color: white;
+}
+
+.container h3 {
+    letter-spacing: .2rem;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 290px) {
+    .container {
+        width: 250px;
+    }
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    align-items: center;
+}
+
+
+/* pause */
+
+.pause {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(6, 163, 184, 0.397);
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(90deg) scale(.8);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 3px rgb(0, 52, 59);
+}
+
+.pause:hover {
+    transform: rotate(90deg) scale(.9);
+}
+
+.pause:active {
+    box-shadow: inset 0px 0px 3px 3px rgb(0, 52, 59);
+}
+
+.pause hr {
+    border: none;
+    background-color: white;
+    height: 2px;
+    margin-top: 5px;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -32%);
+}
+
+.pause hr:first-child {
+    top: 28%;
+}
+
+.pause hr:last-child {
+    bottom: 32%;
+}
+
+
+/* end pause */
+
+
+/* timer */
+
+.timer {
+    background-color: rgb(6, 163, 184);
+    box-shadow: inset 2px 2px 2px rgb(0, 52, 59), inset -2px -2px 2px rgb(189, 232, 238), -2px -2px 2px rgb(0, 52, 59), 2px 2px 2px rgb(189, 232, 238);
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+
+/* end timer */
+
+
+/* end header */
+
+
+/* game board */
+
+.main-board {
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    width: 480px;
+    background-color: rgb(6, 163, 184);
+    border-radius: 0 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 2px rgb(0, 52, 59);
+    padding: 25px;
+    display: grid;
+    grid-gap: 15px;
+}
+
+.easy {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.normal {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+}
+
+.hard {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 80px);
+}
+
+.board button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px rgb(0, 52, 59), -2px -2px 2px 2px rgba(124, 221, 228, 0.623);
+    border-radius: 20px 0;
+    font-family: 'Segoe UI';
+    font-size: 3.5rem;
+    color: seashell;
+    cursor: pointer;
+    background-color: rgb(6, 163, 184);
+}
+
+.hard button {
+    font-size: 2.8rem;
+}
+
+button.focus {
+    box-shadow: inset 2px 2px 2px 2px rgb(0, 52, 59), inset -2px -2px 2px 2px rgba(124, 221, 228, 0.623);
+}
+
+@media screen and (max-width: 499px) {
+    .board {
+        width: 90%;
+    }
+    .board button {
+        font-size: 2.5rem;
+    }
+    .hard button {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .hard {
+        grid-template-rows: repeat(5, 70px);
+    }
+}
+
+
+/* end game board */
+
+
+/* paused display */
+
+.paused-disp .options {
+    height: 30%;
+    justify-content: center;
+}
+
+.options button,
+.options a {
+    margin-top: 15px;
+    background-color: inherit;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    font-family: BlinkMacSystemFont;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .1s ease-in;
+}
+
+.options button:hover,
+.options a:hover {
+    transform: scale(1.1);
+}
+
+.options button:active,
+.options a:active {
+    background-color: white;
+    transform: scale(.9);
+    color: rgb(3, 101, 114);
+}
+
+@media screen and (max-width: 290px) {
+    .options button,
+    .options a {
+        font-size: .7rem;
+    }
+    .container h3 {
+        font-size: 1rem;
+    }
+}
+
+
+/* end paused display */
+
+
+/* on entry */
+
+.on-entry .container {
+    height: 300px;
+    justify-content: space-around;
+}
+
+.on-entry h3 {
+    padding: 10px 0;
+}
+
+.on-entry .opts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.opts input {
+    margin-right: 15px;
+    visibility: hidden;
+}
+
+.opts label {
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: .2rem;
+    position: relative;
+}
+
+.opts label::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.normal label::before {
+    left: -35px;
+}
+
+.hard label::before {
+    left: -30.5px;
+}
+
+.all label::before {
+    left: -39px;
+}
+
+.opts input[type='radio']:checked+label::before {
+    background-color: white;
+}
+
+.select {
+    color: white;
+    background-color: inherit;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    position: relative;
+    left: 10px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.select:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* end on entry */
+
+
+/* complete */
+
+.complete .container {
+    height: 170px;
+    justify-content: center;
+}
+
+.complete .options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* end complete */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzles || Game</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <header>
+        <button class="pause">
+            <hr>
+            <hr>
+        </button>
+
+        <div class="timer">
+            <span class="hours">00</span> :
+            <span class="mins">00</span> :
+            <span class="secs">00</span>
+        </div>
+    </header>
+
+    <!-- main board -->
+    <section class="main-board">
+        <div class="board"></div>
+    </section>
+    <!-- end main board -->
+
+    <!-- paused display -->
+    <section class="overlay paused-disp hide">
+        <div class="container options">
+            <h3>paused</h3>
+
+            <button class='entry-opts'>resume</button>
+            <a href="game.html" class='entry-opts'>restart</a>
+            <a href="index.html" class='entry-opts'>menu</a>
+        </div>
+    </section>
+    <!-- end paused display -->
+
+    <!-- on entering page -->
+    <section class="overlay on-entry hide">
+        <div class="container">
+            <h3>select difficulty</h3>
+
+            <div class="easy opts">
+                <input type="radio" name='difficulty' id='easy' checked='checked' value='easy'>
+                <label for="easy">easy</label>
+            </div>
+            <!-- end filter opt -->
+
+            <!-- filter opt -->
+            <div class="normal opts">
+                <input type="radio" name='difficulty' id='normal' value='normal'>
+                <label for="normal">normal</label>
+            </div>
+            <!-- end filter opt -->
+
+            <!-- filter opt -->
+            <div class="hard opts">
+                <input type="radio" name='difficulty' id='hard' value='hard'>
+                <label for="hard">hard</label>
+            </div>
+            <!-- end filter opt -->
+            <button class="select">select</button>
+        </div>
+    </section>
+    <!-- end on entering page -->
+
+    <!-- game complete -->
+    <section class="overlay complete hide">
+        <div class="container">
+            <h3>congratulations</h3>
+
+            <div class="options">
+                <a href="game.html">restart</a>
+                <a href="index.html">menu</a>
+            </div>
+        </div>
+    </section>
+    <!-- end game complete -->
+
+    <script src="general.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    transition: all ease-in .2s;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in .2s;
+}
+
+header h1 {
+    text-transform: capitalize;
+    font-family: verdana;
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: .2rem;
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+}

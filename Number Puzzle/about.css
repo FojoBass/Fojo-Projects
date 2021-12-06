@@ -1,0 +1,55 @@
+body {
+    background-color: rgba(165, 42, 42, 0.349);
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    flex-basis: 80%;
+    color: rgb(128, 5, 30);
+}
+
+header a {
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    color: rgb(128, 5, 30);
+    border: 1px solid rgb(128, 5, 30);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+header a:hover {
+    background-color: rgb(128, 5, 30);
+    color: rgb(241, 158, 158);
+    box-shadow: -2px -2px 3px rgb(83, 3, 19), 2px 2px 3px rgb(83, 3, 19);
+}
+
+.main-body {
+    height: calc(100vh - 71px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-body p {
+    margin: 5px 0;
+    font-family: monospace;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    color: rgb(128, 5, 30);
+    text-align: center;
+}
+
+.main-body p:first-child span {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 299px) {
+    .main-body p {
+        font-size: .8rem;
+    }
+}
