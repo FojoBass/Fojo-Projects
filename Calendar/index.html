@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>calendar</h1>
+        <div class="cal-opts">
+            <span>v</span>
+            <div>
+                <button class='cal-opt' id='jump'>jump to date</button>
+                <button class='cal-opt' id='today'>go-to today</button>
+                <a href='about.html' class='cal-opt'>about</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main>
+        <div class="header">
+            <button class="prev-next" id='prev'>v</button>
+            <h2>
+                <span class="mth"></span>
+                <span class="year"></span>
+            </h2>
+            <button class="prev-next" id='next'>v</button>
+        </div>
+
+        <div id="cal">
+            <div class="days">
+                <li class='wend'>s</li>
+                <li>m</li>
+                <li>t</li>
+                <li>w</li>
+                <li>t</li>
+                <li>f</li>
+                <li class='wend'>s</li>
+            </div>
+
+            <div class="dates">
+                <li id='sunday' class='wend'></li>
+                <li id='monday'></li>
+                <li id='tuesday'></li>
+                <li id='wednesday'></li>
+                <li id='thursday'></li>
+                <li id='friday'></li>
+                <li id='saturday' class='wend'></li>
+                <li id='sunday' class='wend'></li>
+                <li id='monday'></li>
+                <li id='tuesday'></li>
+                <li id='wednesday'></li>
+                <li id='thursday'></li>
+                <li id='friday'></li>
+                <li id='saturday' class='wend'></li>
+                <li id='sunday' class='wend'></li>
+                <li id='monday'></li>
+                <li id='tuesday'></li>
+                <li id='wednesday'></li>
+                <li id='thursday'></li>
+                <li id='friday'></li>
+                <li id='saturday' class='wend'></li>
+                <li id='sunday' class='wend'></li>
+                <li id='monday'></li>
+                <li id='tuesday'></li>
+                <li id='wednesday'></li>
+                <li id='thursday'></li>
+                <li id='friday'></li>
+                <li id='saturday' class='wend'></li>
+                <li id='sunday' class='wend'></li>
+                <li id='monday'></li>
+                <li id='tuesday'></li>
+                <li id='wednesday'></li>
+                <li id='thursday'></li>
+                <li id='friday'></li>
+                <li id='saturday' class='wend'></li>
+                <li id='sunday' class='wend'></li>
+                <li id='monday'></li>
+                <li id='tuesday'></li>
+                <li id='wednesday'></li>
+                <li id='thursday'></li>
+                <li id='friday'></li>
+                <li id='saturday' class='wend'></li>
+            </div>
+        </div>
+    </main>
+    <!-- end main -->
+
+    <!-- jump to date -->
+    <section class='to-date hide'>
+        <p class="notifications hide"></p>
+
+        <button class="close">x</button>
+
+        <form>
+            <div class="inputs">
+                <input type="number" class='dd' placeholder="dd">
+                <span>:</span>
+                <input type="number" class='mm' placeholder="mm">
+                <span>:</span>
+                <input type="number" class="yy" placeholder="yyyy">
+            </div>
+
+            <input type="submit" value='go'>
+        </form>
+    </section>
+    <!-- end jump to date -->
+
+    <!-- clicked date -->
+    <section class="clicked-date hide">
+        <button class="close">x</button>
+        <div class="wrapper">
+            <div class="top">
+                <p class='day'></p>
+                <p><span class="date"></span> <span id='small'>of</span> <span class="mth"></span>, <span class="year"></span></p>
+            </div>
+            <div class="events">
+                <h1>events</h1>
+
+                <div class="items">
+                    <h2 class='hide'>none</h2>
+                </div>
+
+                <button class="add-event">add</button>
+            </div>
+        </div>
+
+        <!-- enter event -->
+        <div class="container hide">
+            <div class="enter-event">
+                <textarea name="event" cols="25" rows="6" placeholder="Enter event detail"></textarea>
+                <button class='enter'>enter</button>
+            </div>
+        </div>
+        <!-- end enter event -->
+    </section>
+    <!-- end clicked date -->
+
+    <!-- footer -->
+    <footer>
+        <p>created by <span>fojo</span></p>
+        <p>Copyright © <span id='current-year'></span> Calendar All right reserved.</p>
+    </footer>
+    <!-- end footer -->
+
+    <div class='play'></div>
+    <div class='play2'></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

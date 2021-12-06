@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About||Calendar</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>about</h1>
+        <a href='index.html' class='cal-opt'>calendar</a>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main>
+        <article>
+            <p>With this calendar, <span class='special'>date checking,</span> and <span class='special'>schedule keeping</span> is made <span class='special'>easy.</span></p>
+
+            <p><span class='special'>Events</span> can be <span class='special'>saved</span> in any of the dates. Once an event is saved, it is <span class='special'>marked</span> on the calendar, making it <span class="special">easy to locate.</span>
+            </p>
+        </article>
+    </main>
+    <!-- end main -->
+
+    <!-- footer -->
+    <footer>
+        <p>created by <span>fojo</span></p>
+        <p>Copyright © <span id='current-year'></span> Calendar All right reserved.</p>
+    </footer>
+    <!-- end footer -->
+
+    <div class='play'></div>
+    <div class='play2'></div>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const aLink = document.querySelector('header a');
+
+        aLink.onmousedown = () => aLink.classList.add('focus');
+        aLink.onmouseup = () => aLink.classList.remove('focus');
+    </script>
+</body>
+
+</html>
