@@ -1,0 +1,236 @@
+.navBar {
+    background: var(--color3);
+}
+
+main .section-heading {
+    padding: 20px;
+}
+
+.main-sect {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.main-sect .image-side {
+    border-radius: 0 30px 0 30px;
+    overflow: hidden;
+}
+
+.image-side .img-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* details side */
+
+.details-side .contact-items {
+    padding: 15px 0;
+    display: flex;
+    /* background-color: violet; */
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+
+.contact-items .contact-item {
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.contact-item .image {
+    flex-basis: 10%;
+    /* background-color: red; */
+}
+
+.contact-item .img-wrapper {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-item .numbers {
+    /* background-color: green; */
+    flex-basis: 90%;
+    padding-left: 15px;
+}
+
+.contact-item i {
+    flex-basis: 45%;
+    font-size: calc(2 * var(--font-size));
+    color: var(--color1);
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    /* background-color: yellow; */
+}
+
+.contact-item .mail {
+    flex-basis: 55%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: green; */
+}
+
+
+/* end details side */
+
+
+/* form */
+
+.details-side .contact-form {
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 3px grey;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+/* name */
+
+.contact-form .name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.name label {
+    flex-basis: 25%;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+}
+
+.name input {
+    flex-basis: 75%;
+    outline: none;
+    transition: var(--transFast);
+    padding: 5px 10px;
+    letter-spacing: .2rem;
+    font-size: calc(1 * var(--font-size));
+}
+
+
+/* end  name */
+
+
+/* sex */
+
+.contact-form .sex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+.sex+label {
+    cursor: pointer;
+}
+
+.sex input[type='radio']:checked+label {
+    font-weight: 700;
+}
+
+.contact-form textarea {
+    margin-top: 10px;
+    outline: none;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    font-size: calc(1 * var(--font-size));
+    letter-spacing: .1rem;
+    line-height: 30px;
+}
+
+.contact-form input[type='submit'] {
+    outline: none;
+    background-color: white;
+    color: grey;
+    padding: 10px;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid grey;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: var(--transFast);
+}
+
+.contact-form input[type='submit']:hover {
+    background-color: grey;
+    color: white;
+}
+
+.contact-form input[type='submit']:active {
+    background-color: black;
+}
+
+
+/* end sex */
+
+@media screen and (max-width: 400px) {
+    .main-sect {
+        padding: 10px;
+    }
+    .details-side .contact-items {
+        flex-direction: column;
+    }
+    .contact-item i {
+        flex-basis: 10%;
+        justify-content: flex-start;
+        padding-right: 0px;
+    }
+    .contact-item .mail {
+        flex-basis: 90%;
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+    .name label {
+        flex-basis: 50%;
+        text-transform: capitalize;
+        letter-spacing: .1rem;
+        /* background-color: hotpink; */
+    }
+    .name input {
+        /* flex-basis: 50%; */
+        width: 0%;
+        outline: none;
+        transition: var(--transFast);
+        padding: 5px 10px;
+        letter-spacing: .2rem;
+        font-size: calc(1 * var(--font-size));
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .main-sect {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px;
+        padding: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        grid-gap: 20px;
+    }
+    .main-sect .image-side {
+        grid-column: 2/3;
+    }
+    .main-sect .details-side {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+}
+
+
+/* end form */
