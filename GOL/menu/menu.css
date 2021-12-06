@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(-60deg, rgb(121, 245, 218) 25%, rgb(90, 193, 219) 65%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: verdana;
+    letter-spacing: 1.5rem;
+    padding: 70px 0 0;
+    color: rgb(99, 1, 1);
+    font-size: 3rem;
+}
+
+main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    display: block;
+    color: brown;
+    padding: 30px;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    text-shadow: 5px 5px 12px rgb(87, 6, 6);
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 499px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+    }
+    a {
+        font-size: .9rem;
+    }
+    a:hover {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    a {
+        font-size: 1.8rem;
+    }
+    a:hover {
+        font-size: 2rem;
+    }
+}

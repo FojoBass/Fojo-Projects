@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="main.css">
+    <title>GOL | Game</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>GOL</h1>
+        <button>help</button>
+    </header>
+    <!-- end header -->
+
+    <!-- help -->
+    <section id="help" class='hide'>
+        <button class="close-btn">x</button>
+        <div class="center-wrapper">
+            <div class="infos">
+                <div class="info">
+                    <h3>overview</h3>
+                    <p>Game Of Luck is a 5 rounds game which requires you to select a particular shape, after which obscure cards are displayed, from which you are to guess the shape you chose to seek.</p>
+                </div>
+
+                <div class="info">
+                    <h3>difficulty</h3>
+                    <p>The game has two difficulty levels, which determine the number of selections you can make viz; easy: 2 selections, hard: 1 selection.</p>
+                </div>
+
+                <div class="info">
+                    <h3>gameplay</h3>
+                    <p>To select any card, click on it. Once a card is selected, it will be highlighted, and the edges becomes rounded. To deselect, click on an already selected card. To submit selection, click the select button.</p>
+                </div>
+
+                <div class="info">
+                    <h3>results</h3>
+                    <p>After each selection, you either pass or fail. After the end of the 5<sup>th</sup> round, the number of rounds you passed are displayed with your remark viz;
+                        <li>0 rounds passed: very unlucky</li>
+                        <li>1 round passed: unlucky</li>
+                        <li>2 rounds passed: quite unlucky</li>
+                        <li>3 rounds passed: quite lucky</li>
+                        <li>4 rounds passed: lucky</li>
+                        <li>5 rounds passed: very lucky</li>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h4 class='last'>enjoy</h4>
+    </section>
+    <!-- end help -->
+
+    <!-- entry select -->
+    <section id="select" class='grp-sect hide'>
+        <div class="center-wrapper">
+            <h3>Click on the shape of you want to seek</h3>
+            <div class="shapes">
+                <div class="shape tri" data-shape='triangle'></div>
+                <div class="shape cir" data-shape='circle'></div>
+                <div class="shape squ" data-shape='square'></div>
+            </div>
+        </div>
+        <button class="deac">select</button>
+    </section>
+    <!-- end entry select -->
+
+    <!-- diff select -->
+    <section id="diff" class='grp-sect hide'>
+        <div class="center-wrapper">
+            <h3>select difficulty</h3>
+
+            <div class="opts">
+                <div class="opt">
+                    <input type="radio" name='diff' id='easy' checked='checked' value='easy' />
+                    <label for="easy">easy</label>
+                </div>
+
+                <div class="opt">
+                    <input type="radio" name='diff' id='hard' value='hard' />
+                    <label for="hard">hard</label>
+                </div>
+                <button>select</button>
+            </div>
+        </div>
+    </section>
+    <!-- end diff select -->
+
+    <!-- board -->
+    <main>
+        <div class="wrapper">
+            <header>
+                <div class="pause">
+                    <hr>
+                    <hr>
+                </div>
+
+                <p>round <span id='round'></span></p>
+            </header>
+
+            <div class="body">
+                <div class="shape-container">
+                    <div class='shape'></div>
+                </div>
+                <div class="shape-container">
+                    <div class='shape'></div>
+                </div>
+                <div class="shape-container">
+                    <div class='shape'></div>
+                </div>
+                <div class="shape-container">
+                    <div class='shape'></div>
+                </div>
+            </div>
+
+            <div>
+                <button class='deac'>select</button>
+            </div>
+        </div>
+    </main>
+    <!-- end board -->
+
+    <!-- alert -->
+    <section id='alert' class='grp-sect hide'>
+        <h1></h1>
+    </section>
+    <!-- end alert -->
+
+    <!-- finish -->
+    <section class="grp-sect hide" id="fin">
+        <div class="center-wrapper">
+            <h1>finished</h1>
+            <h2><span id='passed-rounds'>1 round</span> passed</h2>
+            <h3>You are <span id='remark'></h3>
+        </div>
+
+        <div class="dest">
+            <a href="main.html" class='restart'>restart</a>
+            <a href="../menu/menu.html">menu</a>
+        </div>
+    </section>
+    <!-- end finish -->
+
+    <!-- pause -->
+    <section class="grp-sect hide" id="pause">
+        <div class="center-wrapper">
+            <div class="nav-opts">
+                <button id="resume-btn" class='nav-opt'>resume</button>
+                <a href='main.html' class='nav-opt restart'>restart</a>
+                <a href="../menu/menu.html" class='nav-opt'>menu</a>
+            </div>
+        </div>
+    </section>
+    <!-- end pause -->
+
+    <div id="seeked">seeked shape: <span></span></div>
+
+        <script>
+            document.querySelectorAll('.grp-sect').forEach((item) => {
+                item.style.height = `calc(100vh - ${document.querySelector('header').getBoundingClientRect().height}px)`;
+            })
+        </script>
+        <script src="../general.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>

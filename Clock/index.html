@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Web Clock</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1><span class="fL">c</span><span class="sL">l</span><span id='mini'>
+         <span class="center"></span>
+            <span class="mH"><span></span></span>
+            <span class="hH"><span></span></span>
+            </span><span class="tL">c</span><span class="lL">k</span>
+        </h1>
+        <aside>
+            <div class="side-btn">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </aside>
+
+        <div class="wrapper">
+            <div class="content">
+                <button id='analog'>analog</button>
+                <button id='digital'>digital</button>
+                <button id='both' class='chosen'>both</button>
+                <div class="formats">
+                    <button data-id='12'>12 hrs</button>
+                    <button data-id='24' class='chosen'>24 hrs</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main>
+        <div class="aClock-container">
+            <div id="aClock">
+                <div id="center"></div>
+
+                <!-- hands -->
+                <div id="hHand">
+                    <span></span>
+                </div>
+                <div id="mHand">
+                    <span></span>
+                </div>
+                <div id="sHand">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dClock-container">
+            <div class="dClock">
+                <span id='h'></span> : <span id='m'></span> <span id='period'></span>
+            </div>
+        </div>
+    </main>
+    <!-- end main -->
+
+    <!-- footer -->
+    <footer>
+        <p>created by <span>fojo</span></p>
+        <p>Copyright © <span id='current-year'></span> Web Clock All rights reserved.</p>
+    </footer>
+    <!-- end footer -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

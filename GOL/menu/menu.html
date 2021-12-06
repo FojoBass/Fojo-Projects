@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="menu.css">
+    <title>GOL | Menu</title>
+</head>
+
+<body>
+    <h1>gol</h1>
+
+    <main>
+        <div class="wrapper">
+            <a href="../main/main.html" class='hide' id='con'>continue</a>
+            <a href="../main/main.html" id='new'>new</a>
+            <a href="../about/about.html">about</a>
+            <a href="../score/score.html">score</a>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('main').style.height = `calc(100vh - ${document.querySelector('h1').getBoundingClientRect().height}px)`;
+    </script>
+    <script src="../general.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

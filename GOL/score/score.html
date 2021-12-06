@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="score.css">
+    <title>GOL | Scores</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>scores</h1>
+        <a href="../menu/menu.html">menu</a>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main>
+        <div class="container">
+            <h1 class='hide'>no score</h1>
+
+            <div class="dets hide">
+                <div class="head">
+                    <h3>S/<span style='text-transform: lowercase;'>n</span></h3>
+                    <h3>diff</h3>
+                    <h3>passed</h3>
+                    <h3>remark</h3>
+                    <h3>date</h3>
+                </div>
+                <div class="det-wrapper"></div>
+
+                <div>
+                    <button class="clear">clear all</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- end main -->
+
+    <!-- clear -->
+    <section id="confirm" class='hide'>
+        <div class="center-wrapper">
+            <div class="container">
+                <h2>clear all scores?</h2>
+
+                <div class="opts">
+                    <button class="opt">no</button>
+                    <button class="opt">yes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end clear -->
+
+    <!-- more info -->
+    <section id="more" class='hide'>
+        <button id='close'>x</button>
+
+        <div class="center-wrapper">
+            <div class="cont">
+                <h2 class="diff"></h2>
+
+                <div class="rounds">
+                    <div class="round">
+                        <span class='num'>round 1</span> <span class='rem'></span>
+                    </div>
+                    <div class="round">
+                        <span class='num'>round 2</span> <span class='rem'></span>
+                    </div>
+                    <div class="round">
+                        <span class='num'>round 3</span> <span class='rem'></span>
+                    </div>
+                    <div class="round">
+                        <span class='num'>round 4</span> <span class='rem'></span>
+                    </div>
+                    <div class="round">
+                        <span class='num'>round 5</span> <span class='rem'></span>
+                    </div>
+                </div>
+                <h2 class="gr"></h2>
+            </div>
+        </div>
+    </section>
+    <!-- end more info -->
+
+    <script src="../general.js"></script>
+    <script src="score.js"></script>
+</body>
+
+</html>
