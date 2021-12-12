@@ -357,6 +357,10 @@ prevBtnClicked = () => {
 
     setTimeout(() => {
         if (mth !== 0) {
+            if(mth === 11){
+                date.setFullYear(date.getFullYear - 1);
+                year = date.getFullYear();
+            }
             date.setMonth(mth - 1);
             mth = date.getMonth();
         } else {
